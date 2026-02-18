@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   script: python -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -40,9 +40,10 @@ tests:
     requirements:
       run:
         - pytest
-        - python ${{ python_min }}
+        - python >=${{ python_min }}
     files:
-      source: tests/
+      source:
+        - tests/
 
 about:
   homepage: https://github.com/OldGrumpyViking/hatch-conda
