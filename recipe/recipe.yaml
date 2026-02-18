@@ -1,7 +1,6 @@
 context:
   name: hatch-conda
   version: "0.5.2"
-  python_min: "3.7"
 
 package:
   name: ${{ name|lower }}
@@ -43,7 +42,7 @@ tests:
     requirements:
       run:
         - pytest
-        - python >=${{ python_min }}
+        - python ${{ python_min }}.*
     files:
       source:
         - tests/
