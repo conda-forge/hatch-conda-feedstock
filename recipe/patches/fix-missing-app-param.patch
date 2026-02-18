@@ -1,0 +1,26 @@
+--- a/hatch_conda/plugin.py
++++ b/hatch_conda/plugin.py
+@@ -52,7 +52,21 @@ class CondaEnvironment(EnvironmentInterface):
+     PLUGIN_NAME = "conda"
+
+-    def __init__(self, *args, **kwargs):
+-        super().__init__(*args, **kwargs)
++    def __init__(
++        self,
++        root,
++        metadata,
++        name,
++        config,
++        matrix_variables,
++        data_directory,
++        isolated_data_directory,
++        platform,
++        verbosity,
++        app,
++    ):
++        super().__init__(root, metadata, name, config, matrix_variables,
++                         data_directory, isolated_data_directory, platform,
++                         verbosity, app)
+
+         self._config_command = None
+         self._config_conda_forge = None
