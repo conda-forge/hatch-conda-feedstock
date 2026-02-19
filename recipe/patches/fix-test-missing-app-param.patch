@@ -1,0 +1,29 @@
+--- a/tests/test_config.py
++++ b/tests/test_config.py
+@@ -22,7 +22,8 @@ class TestPythonVersion:
+             data_directory=data_dir,
+             isolated_data_directory=None,
+             platform=platform,
+             verbosity=0,
++            app=None,
+         )
+
+         assert environment.python_version == default_python_version
+@@ -45,7 +46,8 @@ class TestPythonVersion:
+             data_directory=data_dir,
+             isolated_data_directory=None,
+             platform=platform,
+             verbosity=0,
++            app=None,
+         )
+
+         assert environment.python_version == "3.10"
+@@ -69,7 +71,8 @@ class TestPythonVersion:
+             data_directory=data_dir,
+             isolated_data_directory=None,
+             platform=platform,
+             verbosity=0,
++            app=None,
+         )
+
+         assert environment.python_version == "3.10"
